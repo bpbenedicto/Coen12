@@ -76,10 +76,12 @@ void addElement(SET *sp, char *elt) { // O(n), this is because it is O(n) + O(lo
                 strlen(elt) + 1); //allocate memory for string according to length +1 because of the NULL
 
         for (int i = sp->count; i > storage_location; i--) { //start at the top, decrement until where to store
-            strcpy(sp->data[i], sp->data[i - 1]); //shift every above element up
+
+            //we don't use strcpy for manipulating our set when adding
+            sp->data[i] = strdup(sp->data[i - 1]); //shift every above element up
         }
 
-        strcpy(sp->data[storage_location], elt); //uses array syntax to copy string into now empty space
+        sp->data[storage_location] = strdup(elt); //uses array syntax to copy string into now empty space
         sp->count++; //increment count if you add
     }
 }
@@ -93,7 +95,7 @@ void removeElement(SET *sp, char *elt) { // O(n), same explanation of addElement
     if (found == true) {
         while (i < sp->count) {
             // to remove copy next in line into current spot
-            strcpy(sp->data[i-1], sp->data[i]);
+            sp->data[i-1] = strdup(sp->data[i]);
             i++;
         }
         sp->count--;

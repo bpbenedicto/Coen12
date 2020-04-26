@@ -1,6 +1,8 @@
 /* Brian Benedicto
  * Coen12L Project 3
  * 4/26/2020
+ *
+ * Since this is using standard C11, make sure to use at least gcc -std=c99 if you get an error
  */
 # include <assert.h>
 # include <stdio.h>
@@ -92,3 +94,5 @@ char **getElements(SET *sp) { // O(1)
     assert(sp != NULL); //check if memory is allocated
     return (sp->data);
 }
+
+// hopefully since this is using standard C11, you did make sure to use at least gcc -std=c99

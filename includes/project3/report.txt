@@ -16,13 +16,13 @@ Bible.txt                       3.1780   .9787
 parity
 ------
                               unsorted  sorted
-GreenEggsAndHam.txt             .0103     ????
-Macbeth.txt                          ????
-Genesis.txt                     ????     ????
-HoundOfTheBaskervilles.txt      ????     ????
-TheWarOfTheWorlds.txt           ????     ????
-TreasureIsland.txt              ????     ????
-TheSecretGarden.txt             ????     ????
-TwentyThousandLeagues.txt       ????     ????
-TheCountOfMonteCristo.txt       ????     ????
-Bible.txt                       ????     ????
+GreenEggsAndHam.txt             .0113    .0133
+Macbeth.txt                     .3687    .3780
+Genesis.txt                     .3873    .5007
+HoundOfTheBaskervilles.txt      1.5330   1.6533
+TheWarOfTheWorlds.txt           1.8323   1.8780
+TreasureIsland.txt              1.9000   1.9513
+TheSecretGarden.txt             1.7157   1.6993
+TwentyThousandLeagues.txt       4.0920   4.4917
+TheCountOfMonteCristo.txt       36.1790  38.1553
+Bible.txt                       41.5033  48.5777

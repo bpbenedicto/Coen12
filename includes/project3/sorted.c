@@ -27,7 +27,7 @@ SET *createSet(int maxElts) { // O(1)
     return sp;
 }
 
-static int binary_search(SET *sp, char *elt, bool *found) { // O(n), *found is true if element matches
+static int binary_search(SET *sp, char *elt, bool *found) { // O(log n), *found is true if element matches
 
     assert(sp != NULL); //check if memory successfully allocated
 
@@ -63,7 +63,7 @@ int numElements(SET *sp) { // O(1)
     return (sp->count); //return count
 }
 
-void addElement(SET *sp, char *elt) { // O(n), this is because it is O(1) + O(n) from the search function
+void addElement(SET *sp, char *elt) { // O(n), this is because it is O(n) + O(log n) from the search function
     assert(sp != NULL); //check if memory is allocated
     bool found;
     if (sp->count >= sp->length) return;
@@ -86,12 +86,12 @@ void removeElement(SET *sp, char *elt) { // O(n), same explanation of addElement
     assert(sp != NULL); //check if memory is allocated
     bool found;
 
-    int i = 0;
     int storage_location = binary_search(sp, elt, &found);
+    int i = storage_location+1;
     if (found == true) {
         while (i < sp->count) {
             // to remove copy next in line into current spot
-            strcpy(sp->data[storage_location], sp->data[storage_location + 1]);
+            strcpy(sp->data[i-1], sp->data[i]);
             i++;
         }
         sp->count--;

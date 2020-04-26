@@ -65,12 +65,13 @@ void addElement(SET *sp, char *elt) { // O(n), this is because it is O(1) + O(n)
 void removeElement(SET *sp, char *elt) { // O(n), same explanation of addElement
     assert(sp != NULL); //check if memory is allocated
 
-    int i = 0;
+
     int storage_location = search(sp, elt);
+    int i = storage_location+1;
     if (storage_location != NONDUPLICATE) {
         while (i < sp->count) {
             // to remove copy next in line into current spot
-            strcpy(sp->data[storage_location], sp->data[storage_location + 1]);
+            strcpy(sp->data[i-1], sp->data[i]);
             i++;
         }
         sp->count--;

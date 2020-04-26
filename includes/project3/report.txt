@@ -1,23 +1,23 @@
-unique
+unique (in seconds)
 ------
                               unsorted  sorted
-GreenEggsAndHam.txt             ????     ????
-Macbeth.txt                     ????     ????
-Genesis.txt                     ????     ????
-HoundOfTheBaskervilles.txt      ????     ????
-TheWarOfTheWorlds.txt           ????     ????
-TreasureIsland.txt              ????     ????
-TheSecretGarden.txt             ????     ????
-TwentyThousandLeagues.txt       ????     ????
-TheCountOfMonteCristo.txt       ????     ????
-Bible.txt                       ????     ????
+GreenEggsAndHam.txt             .0110    .0100
+Macbeth.txt                     .1327    .1300
+Genesis.txt                     .1360    .0853
+HoundOfTheBaskervilles.txt      .0063    .0070
+TheWarOfTheWorlds.txt           .3567    .2973
+TreasureIsland.txt              .3230    .2697
+TheSecretGarden.txt             .2963    .2143
+TwentyThousandLeagues.txt       .6187    .4437
+TheCountOfMonteCristo.txt       2.9287   1.2350
+Bible.txt                       3.1780   .9787
 
 
 parity
 ------
                               unsorted  sorted
-GreenEggsAndHam.txt             ????     ????
-Macbeth.txt                     ????     ????
+GreenEggsAndHam.txt             .0103     ????
+Macbeth.txt                          ????
 Genesis.txt                     ????     ????
 HoundOfTheBaskervilles.txt      ????     ????
 TheWarOfTheWorlds.txt           ????     ????

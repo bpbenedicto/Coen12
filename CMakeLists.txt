@@ -3,4 +3,4 @@ project(Coen12 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Coen12 Project3.c)
+add_executable(unique includes/project3/unique.c includes/project3/sorted.c)
